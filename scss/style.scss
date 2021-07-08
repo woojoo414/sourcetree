@@ -74,7 +74,7 @@ body{width:100%; overflow-x:hidden;}
                             display:block;
                             width: 100%; height:100%;
                             position:absolute; top:0; left:100%;
-                            background:#fff;
+                            background:blue;
                             width:100%;
                         }
                         &::after{
@@ -82,7 +82,7 @@ body{width:100%; overflow-x:hidden;}
                             display:block;
                             width: 100%; height:100%;
                             position:absolute; top:0; right:100%;
-                            background:#fff;
+                            background:red;
                         }
                     }
                     &:hover a {
