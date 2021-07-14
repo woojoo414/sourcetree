@@ -35,9 +35,12 @@ input, a, img, span, label, select {
       position: absolute;
       left: 0;
       bottom: 15px; }
-      #header_sub .inner > h1 a {
+      #header_sub .inner > h1 > a {
         font: bold 24px/1 'arial';
         color: #444; }
+        #header_sub .inner > h1 > a:hover {
+          background: #555;
+          color: #fff; }
     #header_sub .inner .menuWeb #gnb {
       position: absolute;
       bottom: 0;
@@ -46,15 +49,15 @@ input, a, img, span, label, select {
         content: '';
         display: block;
         clear: both; }
-      #header_sub .inner .menuWeb #gnb li {
+      #header_sub .inner .menuWeb #gnb > li {
         float: left; }
-        #header_sub .inner .menuWeb #gnb li > a {
+        #header_sub .inner .menuWeb #gnb > li > a {
           display: block;
           padding: 20px 40px;
           font: bold 15px/1 'arial';
           color: #555;
           transition: all 0.5s; }
-        #header_sub .inner .menuWeb #gnb li .sub {
+        #header_sub .inner .menuWeb #gnb > li .sub {
           display: none;
           width: 1180px;
           height: 300px;
@@ -62,7 +65,7 @@ input, a, img, span, label, select {
           top: 51px;
           right: 0;
           background: #fff; }
-          #header_sub .inner .menuWeb #gnb li .sub::before {
+          #header_sub .inner .menuWeb #gnb > li .sub::before {
             content: "";
             display: block;
             width: calc((100vw - 1180px) / 2);
@@ -71,7 +74,7 @@ input, a, img, span, label, select {
             top: 0;
             left: 100%;
             background: inherit; }
-          #header_sub .inner .menuWeb #gnb li .sub::after {
+          #header_sub .inner .menuWeb #gnb > li .sub::after {
             content: "";
             display: block;
             width: calc((100vw - 1180px) / 2);
@@ -80,17 +83,17 @@ input, a, img, span, label, select {
             top: 0;
             right: 100%;
             background: inherit; }
-          #header_sub .inner .menuWeb #gnb li .sub .left {
+          #header_sub .inner .menuWeb #gnb > li .sub .left {
             width: 30%;
             height: 100%;
             background: lightgreen;
             float: left; }
-          #header_sub .inner .menuWeb #gnb li .sub .right {
+          #header_sub .inner .menuWeb #gnb > li .sub .right {
             width: 70%;
             height: 100%;
             background: #fff;
             float: right; }
-        #header_sub .inner .menuWeb #gnb li:hover a {
+        #header_sub .inner .menuWeb #gnb > li:hover a {
           background: #555;
           color: #fff; }
     #header_sub .inner .menuWeb .util {
@@ -691,7 +694,7 @@ input, a, img, span, label, select {
           margin-right: 20px;
           margin-left: 10px; }
     .content > .inner #map {
-      width: 500px;
+      width: 100%;
       height: 500px;
       background: #000; }
 
@@ -815,7 +818,7 @@ body {
           font: bold 15px/50px 'arial';
           color: #555;
           transition: all 0.5s; }
-          #header .inner .menuWeb #gnb > li > a:hover a {
+          #header .inner .menuWeb #gnb > li > a:hover {
             background: #555;
             color: #fff; }
         #header .inner .menuWeb #gnb > li .sub {
@@ -962,6 +965,59 @@ body {
   position: relative;
   overflow: hidden;
   z-index: 1; }
+
+.vNavi {
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%);
+  right: 100px;
+  z-index: 10; }
+  .vNavi li {
+    margin-bottom: 50px; }
+    .vNavi li a {
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: #fff; }
+      .vNavi li a.on {
+        background: #111;
+        height: 100px; }
+
+#box1 {
+  padding: 150px 0px;
+  background: orange; }
+  #box1 .inner {
+    width: 1180px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px; }
+
+#box2 {
+  padding: 150px 0px;
+  background: lightgreen; }
+  #box2 .inner {
+    width: 1180px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px; }
+
+#box3 {
+  padding: 150px 0px;
+  background: pink; }
+  #box3 .inner {
+    width: 1180px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px; }
 
 /* footer --------------------------- */
 #footer {

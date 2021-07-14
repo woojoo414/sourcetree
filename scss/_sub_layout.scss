@@ -15,9 +15,12 @@
             left:0; 
             bottom:15px; 
 
-            a{
+            >a{
                 font:bold 24px/1 'arial'; 
                 color:#444; 
+                &:hover{
+                    background:#555; color:#fff; 
+                } 
             }
         }
 
@@ -32,7 +35,7 @@
                     display:block; 
                     clear:both; 
                 }
-                li{
+                >li{
                     float:left; 
                     >a{
                         display:block; 

@@ -7,25 +7,25 @@ var t_on = document.querySelectorAll(".traffic li")[0]; //트래픽 보기 버�
 var t_off = document.querySelectorAll(".traffic li")[1]; //트래픽 숨기기 버튼 선택자
 
 var drag = true; //드래그 가능
-var zoom = true; //줌 가능
+var zoom = false; //줌 가능
 
 //처음 로딩완료시 출력될 지도의 경도, 위도
 //1.구글맵에서 검색해서 경도,위도값 구함 (위치값이 정밀하지 못함)
 //2.카카오맵 api에서 클릭으로 마커표시 샘플코드 (위의 위치값을 적용)
 //3.해당 위치에서 우리가 원하는 위치를 정밀하게 마커로 찍어서 표시 (위도, 경도값) 구함
 var options = { 
-	center: new kakao.maps.LatLng(37.50615938104634,126.75255391880641), 
+	center: new kakao.maps.LatLng(37.57597797738637,126.9768666762985), 
 	level: 3 
 };
 
 //각각의 본점, 지점의 이름, 위도,경도, 마커이미지, 마커수정위치값, 매칭되는 버튼을 등록
 var markerOptions = [
     {
-        title:"본점", 
-        latlng: new kakao.maps.LatLng(37.50615938104634,126.75255391880641),
-        imgSrc : 'img/marker1.png', 
-        imgSize: new kakao.maps.Size(232,99),
-        imgPos : { offset: new kakao.maps.Point(113,99)}, //116, 99
+        title:"광화문 입구", 
+        latlng: new kakao.maps.LatLng(37.57597797738637,126.9768666762985),
+        imgSrc : 'img/marker4.png', 
+        imgSize: new kakao.maps.Size(64,64),
+        imgPos : { offset: new kakao.maps.Point(32,64)}, //116, 99
         button: branch_btns[0]
     },
     {
