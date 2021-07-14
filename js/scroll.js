@@ -51,4 +51,12 @@ $(window).on("scroll",function(){
         $(".vNavi li a").removeClass("on");
         $(".vNavi li").eq(3).children("a").addClass("on");
     }
+});
+
+//세로 네비버튼 클릭시 해당 순번의 배열 위치값으로 이동
+$(".vNavi li").on("click", function(e){
+    e.preventDefault();
+    var i = $(this).index();
+
+    $("html, body").stop().animate({scrollTop:posArr[i]}, 1000);
 })
